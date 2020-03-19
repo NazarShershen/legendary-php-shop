@@ -24,7 +24,7 @@ class Artifact
         $this->attributes = $data['attributes'] ?? '';
         $this->modifiers = $data['modifiers'] ?? '';
         $this->description = $data['flavour_text'] ?? '';
-        $this->imageUrl = $data['image_url'] ?? '';
+        $this->imageUrl = $data['image_url'] ?? 'assets/images/artifacts/no-image.png';
         $this->price = $data['price'] ?? '';
 
         return $this;
