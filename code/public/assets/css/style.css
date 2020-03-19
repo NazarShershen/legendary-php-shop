@@ -157,3 +157,9 @@ header > h1 {
 }
 /* Stolen CSS ends here */
 
+#add-item .create-artifact label {
+  color: white;
+}
+#add-item .create-artifact textarea {
+  min-height: 100px;
+}

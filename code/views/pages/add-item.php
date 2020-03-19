@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
             <form action="" enctype="multipart/form-data" method="POST" class="create-artifact">
                 <div class="form-group">
                     <label for="title">Title:</label>
