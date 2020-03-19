@@ -39,7 +39,7 @@ class Shop
      *
      * @param Artifact $item
      */
-    public function addNewItem(Artifact $item)
+    public function addNewItem(Artifact $item): void
     {
         $this->goods[] = $item;
         $this->saveGoods();
@@ -54,7 +54,7 @@ class Shop
             return $item->toArray();
         }, $this->goods);
 
-        file_put_contents($this->getStoragePath(), json_encode($arrayOfGoods, [JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES]));
+        file_put_contents($this->getStoragePath(), json_encode($arrayOfGoods, JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES));
         $this->loadGoods();
     }
 
