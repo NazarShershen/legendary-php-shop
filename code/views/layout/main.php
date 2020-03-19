@@ -23,7 +23,7 @@
 
 <?= getHeader() ?>
 
-<? include $pagePath; ?>
+<?php include $pagePath; ?>
 
 </body>
 </html>

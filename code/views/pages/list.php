@@ -1,5 +1,5 @@
 <div class="artifacts-container">
-    <? foreach ((new \App\Shop)->getGoods() as $item) : ?>
-        <? renderCard($item); ?>
-    <? endforeach; ?>
+    <?php foreach ((new \App\Shop)->getGoods() as $item) : ?>
+        <?php renderCard($item); ?>
+    <?php endforeach; ?>
 </div>
