@@ -25,7 +25,7 @@ if (isset($_GET['action'])) {
 
     if ($action == 'save-artifact') {
         $dataToSave = $_REQUEST['artifact'];
-        $artifact = (new CreateArtifact)->execute($dataToSave);
+        $artifact = (new CreateArtifact(new Shop))->execute($dataToSave);
         (new Shop())->addNewItem($artifact);
 
         header("Location: {$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}", true, 301);

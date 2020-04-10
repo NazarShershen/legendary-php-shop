@@ -12,10 +12,19 @@ class CreateArtifact
 
     /**
      * CreateArtifact constructor.
+     * @param Shop $shop
      */
-    public function __construct()
+    public function __construct(Shop $shop)
     {
-        $this->shop = new Shop();
+        $this->shop = $shop;
+    }
+
+    /**
+     * @param Shop $shop
+     */
+    public function setShop(Shop $shop): void
+    {
+        $this->shop = $shop;
     }
 
     /**
