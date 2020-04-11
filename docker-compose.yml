@@ -1,17 +1,18 @@
-version: '3.3'
-
+version: '3'
 services:
   web:
-    image: nginx:latest
+    image: 'nginx:latest'
     ports:
-        - "8080:80"
+      - '8080:80'
     volumes:
-        - ./code:/code
-        - ./site.conf:/etc/nginx/conf.d/site.conf
+      - './code:/code'
+      - './site.conf:/etc/nginx/conf.d/site.conf'
     links:
-        - php
-
+      - php
   php:
     build: .
     volumes:
-        - ./code:/code
+      - './code:/code'
+    environment:
+      XDEBUG_CONFIG: 'remote_host=192.168.1.115 remote_enable=1'
+      PHP_IDE_CONFIG: 'serverName=Docker'
