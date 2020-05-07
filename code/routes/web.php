@@ -11,12 +11,14 @@
 |
 */
 
-use App\Http\Controllers\HomeController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\ArtifactController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('home', [HomeController::class, 'index']);
-//Route::get('home', 'HomeController@index');
+Route::prefix('artifacts')->name('artifacts.')->group(function () {
+    Route::get('', [ArtifactController::class, 'index'])->name('index');
+    Route::get('new', [ArtifactController::class, 'create'])->name('create');
+    Route::post('', [ArtifactController::class, 'store'])->name('store');
+});

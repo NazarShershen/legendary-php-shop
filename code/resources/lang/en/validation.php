@@ -129,9 +129,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
+        'attributes' => [
+            'amount' => '{1} The artifact must have at least :amount attribute|[2, *] The artifact must have at least :amount attributes',
+        ]
     ],
 
     /*
